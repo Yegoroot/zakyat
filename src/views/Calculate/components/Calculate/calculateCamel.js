@@ -20,17 +20,17 @@ const hukms = [
       {
         min: 10,
         max: 15,
-        zakyat: '2 ship'
+        zakyat: '2 ships'
       },
       {
         min: 15,
         max: 20,
-        zakyat: '3 ship'
+        zakyat: '3 ships'
       },
       {
         min: 20,
         max: 25,
-        zakyat: '4 ship'
+        zakyat: '4 ships'
       },
       {
         min: 25,
@@ -40,27 +40,27 @@ const hukms = [
       {
         min: 36,
         max: 46,
-        zakyat: '(1) two year\'s old camel'
+        zakyat: '(1) two years old camel'
       },
       {
         min: 46,
         max: 51,
-        zakyat: '(1) three year\'s old camel'
+        zakyat: '(1) three years old camel'
       },
       {
         min: 51,
         max: 76,
-        zakyat: '(1) four year\'s old camel'
+        zakyat: '(1) four years old camel'
       },
       {
         min: 76,
         max: 91,
-        zakyat: '(2) two year\'s old camel'
+        zakyat: '(2) two years old camel'
       },
       {
         min: 91,
         max: 121,
-        zakyat: '(2) three year\'s old camel'
+        zakyat: '(2) three years old camel'
       }
     ]
   },
@@ -69,7 +69,7 @@ const hukms = [
       min: 121,
       max: 150
     },
-    zakyatAdditional: '(2) three year\'s old camel', // wagib
+    zakyatAdditional: '(2) three years old camel', // wagib
     options: {
       minus: 120, // используеться для подсчета zakyat (input - minus )
     },
@@ -82,22 +82,22 @@ const hukms = [
       {
         min: 5,
         max: 10,
-        zakyat: '(1) ship',
+        zakyat: '1 ship',
       },
       {
         min: 10,
         max: 15,
-        zakyat: '(2) ship',
+        zakyat: '2 ships',
       },
       {
         min: 15,
         max: 20,
-        zakyat: '(3) ship',
+        zakyat: '3 ships',
       },
       {
         min: 20,
         max: 25,
-        zakyat: '(4) ship',
+        zakyat: '4 ships',
       },
       {
         min: 25,
@@ -123,22 +123,22 @@ const hukms = [
       {
         min: 5,
         max: 10,
-        zakyat: '(1) ship',
+        zakyat: '1 ship',
       },
       {
         min: 10,
         max: 15,
-        zakyat: '(2) ships',
+        zakyat: '2 ships',
       },
       {
         min: 15,
         max: 20,
-        zakyat: '(3) ships',
+        zakyat: '3 ships',
       },
       {
         min: 20,
         max: 25,
-        zakyat: '(4) ships',
+        zakyat: '4 ships',
       },
       {
         min: 25,
@@ -148,7 +148,7 @@ const hukms = [
       {
         min: 36,
         max: 46,
-        zakyat: '(1) two year\'s old camel',
+        zakyat: '(1) two years old camel',
       },
 
     ]
