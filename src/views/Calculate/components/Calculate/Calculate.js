@@ -19,7 +19,7 @@ import {
   FormControl
 } from '@material-ui/core'
 
-import calculateCamel from './calculateCamel'
+import resultCalculate from './resultCalculate'
 
 
 const useStyles = makeStyles(() => ({
@@ -62,6 +62,7 @@ const Calculate = (props) => {
 
   const [values, setValues] = useState({
     count: '',
+    type: ''
   })
 
   const handleChange = (event) => {
@@ -70,15 +71,12 @@ const Calculate = (props) => {
       [event.target.name]: event.target.value
     })
   }
-  const [animal, setanimal] = React.useState('')
-  const handleChangeSelect = (event) => {
-    setanimal(event.target.value)
-  }
+
 
   const onCalculate = (e) => {
     e.preventDefault()
-    const result = calculateCamel(values.count)
-    const { zakyat, zakyatAdditional } = result
+    const result = resultCalculate(values)
+    const { zakyat = '', zakyatAdditional = '' } = result
     const and = (zakyat && zakyatAdditional) ? 'and' : ''
     let message = `${zakyatAdditional} ${and} ${zakyat}`
     if (message.length === 2) {
@@ -100,21 +98,24 @@ const Calculate = (props) => {
           />
           <Divider />
           <CardContent>
-            {/* <FormControl variant="outlined" className={classes.formControl}>
-              <InputLabel id="demo-simple-select-outlined-label">Animal </InputLabel>
+            <FormControl variant="outlined" className={classes.formControl}>
+              <InputLabel id="demo-simple-select-outlined-label">Type </InputLabel>
               <Select
+                name="type"
                 labelId="demo-simple-select-outlined-label"
                 id="demo-simple-select-outlined"
-                value={animal}
-                onChange={handleChangeSelect}
-                label="animal"
+                value={values.type}
+                required
+                onChange={handleChange}
+                label="type"
               >
-                <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
+                {/* <MenuItem value="">
+                  <em>None</em>
+                </MenuItem> */}
+                <MenuItem value="cow">Cow</MenuItem>
                 <MenuItem value="camel">Camel</MenuItem>
               </Select>
-            </FormControl> */}
+            </FormControl>
             <TextField
               fullWidth
               label="Count"
@@ -122,6 +123,7 @@ const Calculate = (props) => {
               onChange={handleChange}
               style={{ marginTop: '1rem' }}
               type="number"
+              required
               value={values.confirm}
               variant="outlined"
             />
